@@ -1,0 +1,72 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadatro de Alunos</title>
+</head>
+
+<body>
+  <tr>
+    <td>
+      <div align="left">
+        <h2>
+          <font face="Arial">Cadastro:</font>
+        </h2>
+      </div>
+    </td>
+  </tr>
+  <form action="adm.php" method="post">
+    <table width="600">
+      <tr>
+        <td width="100">Nome:</td>
+        <td><input type="text" name="nome" size="50" maxlength="50">&nbsp;
+        </td>
+        <td align="left">
+          <p><input type="button" value="Grade" onClick="location.href='busca_nome.php?nome='+nome.value;"> <img src="imgs/lupa.png" align="center"></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="100">E-mail:</td>
+        <td><input type="text" name="mail" size="50" maxlength="30"></td>
+      </tr>
+      <tr>
+        <td width="100">Fone:</td>
+        <td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="ddd" size="1"
+            maxlength="2">
+          -
+          <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="fone" maxlength="9">
+        </td>
+      </tr>
+      <tr>
+        <td width="100">Endereço:</td>
+        <td><input type="text" name="endereco" size="50" maxlength="50"></td>
+      </tr>
+      <tr>
+        <td width="100">Cidade:</td>
+        <td><input type="text" name="cidade" size="50" maxlength="30"></td>
+        <td>U.F:</td>
+        <td>
+          <select name="uf">
+            <option>GO</option>
+            <option>TO</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>DF</option>
+          </select>
+          <input type="hidden" name="funcao" value="gravar">
+        </td>
+      </tr>
+    </table>
+    <br>
+    <table cellspacing="0">
+      <td>
+        <input type="reset" name="btLimpar" value="Limpar">
+      </td>
+      <td width="100">
+        <div align="right"><input type="Submit" name="btGravar" value="Gravar"></div>
+      </td>
+    </table>
+  </form>
+</body>
+
+</html>
